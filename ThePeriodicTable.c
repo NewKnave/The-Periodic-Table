@@ -11,17 +11,26 @@ int main(void) {
 
 	char UserInput[8];
 	int Selection = 0;
+    char Exit[5] = "exit\0";
 
 	GenerateThePeriodicTable();
 
 	printf("\n\nPlease select an element by its number\n");
+    printf("Enter the following to exit: \"exit\"\n");
 	while(IsProgramRunning == true) {
 		printf("User: ");
 		fgets(UserInput, sizeof(UserInput), stdin);
 		UserInput[strcspn(UserInput, "\n")] = '\0';
 		Selection = atoi(UserInput);
 
-		TheElements(Selection);
+        if(strcmp(UserInput, Exit) == 0) {
+            printf("\nGoodbye user\n\n");
+            IsProgramRunning = false;
+        }
+
+        else {
+		    TheElements(Selection);
+        }
 
 		fflush(stdin);
 	}
@@ -54,7 +63,10 @@ void GenerateThePeriodicTable(void) {
     printf("\n\t\t*\t57\t58\t59\t60\t61\t62\t63\t64\t65\t66\t67\t68\t69\t70");
     printf("\n\t\t\tLa\tCe\tPr\tNd\tPm\tSm\tEu\tGd\tTb\tDy\tHo\tEr\tTm\tYb\n");
 
-    printf("\n\t\t**\t89\t90\t91\t92\t93\t94\t95\t96\t97\t98\t99\t100\t101\t102\t");
+    printf("\n\t\t**\t89\t90\t91\t92\t93\t94\t95\t96\t97\t98\t99\t100\t101\t102");
+    printf("\n\t\t\tAc\tTh\tPa\tU\tNp\tPu\tAm\tCm\tBk\tCf\tEs\tFm\tMd\tNo");
+
+    return;
 }
 
 void TheElements(int _Select) {
@@ -839,10 +851,410 @@ void TheElements(int _Select) {
             printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d⁹ 6s¹\n");
             break;
 
+        case 79:
+            printf("Name:\tGold\n");
+            printf("Symbol:\tAu\n");
+            printf("Atomic Number:\t79\n");
+            printf("Atomic Mass:\t196.97 g/mol\n");
+            printf("Group:\t11 (Transition Metal)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s¹\n");
+            break;
+
+        case 80:
+            printf("Name:\tMercury\n");
+            printf("Symbol:\tHg\n");
+            printf("Atomic Number:\t80\n");
+            printf("Atomic Mass:\t200.59 g/mol\n");
+            printf("Group:\t12 (Transition Metal)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s²\n");
+            break;
+
+        case 81:
+            printf("Name:\tThallium\n");
+            printf("Symbol:\tTl\n");
+            printf("Atomic Number:\t81\n");
+            printf("Atomic Mass:\t204.38 g/mol\n");
+            printf("Group:\t13 (Post-transition Metal)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p¹\n");
+            break;
+
+        case 82:
+            printf("Name:\tLead\n");
+            printf("Symbol:\tPb\n");
+            printf("Atomic Number:\t82\n");
+            printf("Atomic Mass:\t207.2 g/mol\n");
+            printf("Group:\t14 (Post-transition Metal)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p²\n");
+            break;
+
+        case 83:
+            printf("Name:\tBismuth\n");
+            printf("Symbol:\tBi\n");
+            printf("Atomic Number:\t83\n");
+            printf("Atomic Mass:\t208.98 g/mol\n");
+            printf("Group:\t15 (Post-transition Metal)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p³\n");
+            break;
+
+        case 84:
+            printf("Name:\tPolonium\n");
+            printf("Symbol:\tPo\n");
+            printf("Atomic Number:\t84\n");
+            printf("Atomic Mass:\t209.0 g/mol\n");
+            printf("Group:\t16 (Chalcogen)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁴\n");
+            break;
+
+        case 85:
+            printf("Name:\tAstatine\n");
+            printf("Symbol:\tAt\n");
+            printf("Atomic Number:\t85\n");
+            printf("Atomic Mass:\t210.0 g/mol\n");
+            printf("Group:\t17 (Halogen)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁵\n");
+            break;
+
+        case 86:
+            printf("Name:\tRadon\n");
+            printf("Symbol:\tRn\n");
+            printf("Atomic Number:\t86\n");
+            printf("Atomic Mass:\t222.0 g/mol\n");
+            printf("Group:\t18 (Noble Gas)\n");
+            printf("Period:\t6\n");
+            printf("Electron Configuration:\t[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶\n");
+            break;
+
+        case 87:
+            printf("Name:\tFrancium\n");
+            printf("Symbol:\tFr\n");
+            printf("Atomic Number:\t87\n");
+            printf("Atomic Mass:\t223.0 g/mol\n");
+            printf("Group:\t1 (Alkali Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 7s¹\n");
+            break;
+
+        case 88:
+            printf("Name:\tRadium\n");
+            printf("Symbol:\tRa\n");
+            printf("Atomic Number:\t88\n");
+            printf("Atomic Mass:\t226.0 g/mol\n");
+            printf("Group:\t2 (Alkaline Earth Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 7s²\n");
+            break;
+
+        case 89:
+            printf("Name:\tActinium\n");
+            printf("Symbol:\tAc\n");
+            printf("Atomic Number:\t89\n");
+            printf("Atomic Mass:\t227.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 6d¹ 7s²\n");
+            break;
+
+        case 90:
+            printf("Name:\tThorium\n");
+            printf("Symbol:\tTh\n");
+            printf("Atomic Number:\t90\n");
+            printf("Atomic Mass:\t232.04 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 6d² 7s²\n");
+            break;
+
+        case 91:
+            printf("Name:\tProtactinium\n");
+            printf("Symbol:\tPa\n");
+            printf("Atomic Number:\t91\n");
+            printf("Atomic Mass:\t231.04 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f² 6d¹ 7s²\n");
+            break;
+
+        case 92:
+            printf("Name:\tUranium\n");
+            printf("Symbol:\tU\n");
+            printf("Atomic Number:\t92\n");
+            printf("Atomic Mass:\t238.03 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f³ 6d¹ 7s²\n");
+            break;
+
+        case 93:
+            printf("Name:\tNeptunium\n");
+            printf("Symbol:\tNp\n");
+            printf("Atomic Number:\t93\n");
+            printf("Atomic Mass:\t237.05 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f⁴ 6d¹ 7s²\n");
+            break;
+
+        case 94:
+            printf("Name:\tPlutonium\n");
+            printf("Symbol:\tPu\n");
+            printf("Atomic Number:\t94\n");
+            printf("Atomic Mass:\t244.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f⁶ 7s²\n");
+            break;
+
+        case 95:
+            printf("Name:\tAmericium\n");
+            printf("Symbol:\tAm\n");
+            printf("Atomic Number:\t95\n");
+            printf("Atomic Mass:\t243.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f⁷ 7s²\n");
+            break;
+
+        case 96:
+            printf("Name:\tCurium\n");
+            printf("Symbol:\tCm\n");
+            printf("Atomic Number:\t96\n");
+            printf("Atomic Mass:\t247.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f⁷ 6d¹ 7s²\n");
+            break;
+
+        case 97:
+            printf("Name:\tBerkelium\n");
+            printf("Symbol:\tBk\n");
+            printf("Atomic Number:\t97\n");
+            printf("Atomic Mass:\t247.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f⁹ 7s²\n");
+            break;
+
+        case 98:
+            printf("Name:\tCalifornium\n");
+            printf("Symbol:\tCf\n");
+            printf("Atomic Number:\t98\n");
+            printf("Atomic Mass:\t251.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁰ 7s²\n");
+            break;
+
+        case 99:
+            printf("Name:\tEinsteinium\n");
+            printf("Symbol:\tEs\n");
+            printf("Atomic Number:\t99\n");
+            printf("Atomic Mass:\t252.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹¹ 7s²\n");
+            break;
+
+        case 100:
+            printf("Name:\tFermium\n");
+            printf("Symbol:\tFm\n");
+            printf("Atomic Number:\t100\n");
+            printf("Atomic Mass:\t257.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹² 7s²\n");
+            break;
+
+        case 101:
+            printf("Name:\tMendelevium\n");
+            printf("Symbol:\tMd\n");
+            printf("Atomic Number:\t101\n");
+            printf("Atomic Mass:\t258.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹³ 7s²\n");
+            break;
+
+        case 102:
+            printf("Name:\tNobelium\n");
+            printf("Symbol:\tNo\n");
+            printf("Atomic Number:\t102\n");
+            printf("Atomic Mass:\t259.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 7s²\n");
+            break;
+
+        case 103:
+            printf("Name:\tLawrencium\n");
+            printf("Symbol:\tLr\n");
+            printf("Atomic Number:\t103\n");
+            printf("Atomic Mass:\t262.0 g/mol\n");
+            printf("Group:\t3 (Actinide)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 7s² 7p¹\n");
+            break;
+
+        case 104:
+            printf("Name:\tRutherfordium\n");
+            printf("Symbol:\tRf\n");
+            printf("Atomic Number:\t104\n");
+            printf("Atomic Mass:\t267.0 g/mol\n");
+            printf("Group:\t4 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d² 7s²\n");
+            break;
+
+        case 105:
+            printf("Name:\tDubnium\n");
+            printf("Symbol:\tDb\n");
+            printf("Atomic Number:\t105\n");
+            printf("Atomic Mass:\t268.0 g/mol\n");
+            printf("Group:\t5 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d³ 7s²\n");
+            break;
+
+        case 106:
+            printf("Name:\tSeaborgium\n");
+            printf("Symbol:\tSg\n");
+            printf("Atomic Number:\t106\n");
+            printf("Atomic Mass:\t269.0 g/mol\n");
+            printf("Group:\t6 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d⁴ 7s²\n");
+            break;
+
+        case 107:
+            printf("Name:\tBohrium\n");
+            printf("Symbol:\tBh\n");
+            printf("Atomic Number:\t107\n");
+            printf("Atomic Mass:\t270.0 g/mol\n");
+            printf("Group:\t7 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d⁵ 7s²\n");
+            break;
+
+        case 108:
+            printf("Name:\tHassium\n");
+            printf("Symbol:\tHs\n");
+            printf("Atomic Number:\t108\n");
+            printf("Atomic Mass:\t277.0 g/mol\n");
+            printf("Group:\t8 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d⁶ 7s²\n");
+            break;
+
+        case 109:
+            printf("Name:\tMeitnerium\n");
+            printf("Symbol:\tMt\n");
+            printf("Atomic Number:\t109\n");
+            printf("Atomic Mass:\t278.0 g/mol\n");
+            printf("Group:\t9 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d⁷ 7s²\n");
+            break;
+
+        case 110:
+            printf("Name:\tDarmstadtium\n");
+            printf("Symbol:\tDs\n");
+            printf("Atomic Number:\t110\n");
+            printf("Atomic Mass:\t281.0 g/mol\n");
+            printf("Group:\t10 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d⁸ 7s²\n");
+            break;
+
+        case 111:
+            printf("Name:\tRoentgenium\n");
+            printf("Symbol:\tRg\n");
+            printf("Atomic Number:\t111\n");
+            printf("Atomic Mass:\t282.0 g/mol\n");
+            printf("Group:\t11 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d⁹ 7s²\n");
+            break;
+
+        case 112:
+            printf("Name:\tCopernicium\n");
+            printf("Symbol:\tCn\n");
+            printf("Atomic Number:\t112\n");
+            printf("Atomic Mass:\t285.0 g/mol\n");
+            printf("Group:\t12 (Transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d¹⁰ 7s²\n");
+            break;
+
+        case 113:
+            printf("Name:\tNihonium\n");
+            printf("Symbol:\tNh\n");
+            printf("Atomic Number:\t113\n");
+            printf("Atomic Mass:\t286.0 g/mol\n");
+            printf("Group:\t13 (Post-transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹\n");
+            break;
+
+        case 114:
+            printf("Name:\tFlerovium\n");
+            printf("Symbol:\tFl\n");
+            printf("Atomic Number:\t114\n");
+            printf("Atomic Mass:\t289.0 g/mol\n");
+            printf("Group:\t14 (Post-transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p²\n");
+            break;
+
+        case 115:
+            printf("Name:\tMoscovium\n");
+            printf("Symbol:\tMc\n");
+            printf("Atomic Number:\t115\n");
+            printf("Atomic Mass:\t290.0 g/mol\n");
+            printf("Group:\t15 (Post-transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³\n");
+            break;
+
+        case 116:
+            printf("Name:\tLivermorium\n");
+            printf("Symbol:\tLv\n");
+            printf("Atomic Number:\t116\n");
+            printf("Atomic Mass:\t293.0 g/mol\n");
+            printf("Group:\t16 (Post-transition Metal)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴\n");
+            break;
+
+        case 117:
+            printf("Name:\tTennessine\n");
+            printf("Symbol:\tTs\n");
+            printf("Atomic Number:\t117\n");
+            printf("Atomic Mass:\t294.0 g/mol\n");
+            printf("Group:\t17 (Halogen)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵\n");
+            break;
+
+        case 118:
+            printf("Name:\tOganesson\n");
+            printf("Symbol:\tOg\n");
+            printf("Atomic Number:\t118\n");
+            printf("Atomic Mass:\t294.0 g/mol\n");
+            printf("Group:\t18 (Noble Gas)\n");
+            printf("Period:\t7\n");
+            printf("Electron Configuration:\t[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶\n");
+            break;
+
 		default:
 			printf("Nothing happened\n");
 	}
 	printf("\n");
 
-	return;
+    return;
 }
