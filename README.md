@@ -16,8 +16,8 @@ A command-line periodic table explorer that enables users to retrieve comprehens
   - `<string.h>`
 
 ## Compilation
-```bash
-gcc -o periodic_table periodic_table.c
+```
+gcc periodic_table.c -o periodic_table
 ```
 
 ## Usage
