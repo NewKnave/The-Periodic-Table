@@ -1,10 +1,10 @@
 # The-Periodic-Table
 
-```
+```c
 void Test(void)
 ```
 
-```
+```c
 void TheElements(int _Select) {
 	printf("\n");
     switch(_Select) {
