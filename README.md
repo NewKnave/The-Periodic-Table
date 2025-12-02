@@ -50,7 +50,7 @@ For each element, the program displays:
 - Electron Configuration
 
 ## Example Interaction
-```bash
+```
 1																			2
 H																			He
 
