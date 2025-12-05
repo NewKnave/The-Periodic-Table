@@ -79,7 +79,7 @@ Fr	Ra	**		Lr	Rf	Db	Sg	Bh	Hs	Mt	Ds	Rg	Cn	Nh	Fl	Mc	Lv	Ts	Og
 				Ac	Th	Pa	U	Np	Pu	Am	Cm	Bk	Cf	Es	Fm	Md	No
 
 Please select an element by its number
-Enter the following to ecit: "exit"
+Enter the following to exit: "exit"
 User: 11
 
 Name:   Sodium
