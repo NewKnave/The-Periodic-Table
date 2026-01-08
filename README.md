@@ -2,3 +2,6 @@
 A terminal-base program
 
 ## User interaction
+
+## Example
+
